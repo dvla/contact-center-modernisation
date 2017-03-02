@@ -1,0 +1,74 @@
+<!-- START -->
+    <style type="text/css">       
+        #web-chat-icon > div,
+        #web-chat-icon .column-half,
+        #web-chat-icon img {
+            margin: 0;
+            padding: 0;
+        }
+        #web-chat-icon {
+            width: 300px;
+            height: 110px;
+            cursor: pointer;
+        }
+        #web-chat-icon img {
+            width: 80%;
+            padding-top: .75em;
+            padding-left: .5em;
+        }
+        #web-chat-icon p {
+            font-weight: 700;
+            padding-top: .45em;
+            padding-bottom: .5em;
+            margin-bottom: 0em;
+        }
+        #web-chat-icon input.button.button-start.button-get-started {
+            margin-top: 0em;
+            background-position: 100% 45%;
+            background-size: 18%;
+        } 
+        </style>
+
+<!-- DEV Web Chat -->
+
+<script type='text/javascript' src='https://c.la1-c1-frf.salesforceliveagent.com/content/g/js/38.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1-c1-frf.salesforceliveagent.com/chat', '57258000000010w', '00D58000000I6nx');
+</script>
+
+<div id="web-chat-icon" style="border: 0px none; cursor: pointer; display:none">
+    <div class="form-group">
+        <h3 class="heading-small">Live chat with DVLA</h3>
+        <div class="column-third">
+            <apex:image url="{!$Resource.chatIconSpeech}" />
+        </div>
+        <div class="column-two-thirds">
+            <p>Agent online and available to chat</p>
+            <div class="form-group">
+                <input id="button" name="button" class="button" type="button" onclick="liveagent.startChat('573580000008Rvr')" value="Start chat" />
+            </div>
+        </div>
+    </div>
+</div>
+                
+<div id="web-chat-icon-offline" ></div>
+                
+<!-- End Web Chat -->
+           
+<!-- JS Show/Hide -->
+<script type='text/javascript'>
+                if (!window._laq) { window._laq = []; }
+                    window._laq.push(function(){liveagent.showWhenOnline('573580000008Rvr', document.getElementById('web-chat-icon'));
+                    liveagent.showWhenOffline('573580000008Rvr', document.getElementById('web-chat-icon-offline'));
+                });
+                
+                liveagent.addCustomDetail("Service","EVL", false);
+            
+        liveagent.addCustomDetail("Transaction ID","", false);
+            
+        liveagent.addCustomDetail("Failure","VedEx", false);
+
+                </script>
+<!-- End JS Show/Hide -->
+  
+<!-- END -->
